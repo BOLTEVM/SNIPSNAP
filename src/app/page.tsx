@@ -10,7 +10,8 @@ export default function Home() {
   useEffect(() => {
     async function fetchVideos() {
       try {
-        const response = await fetch("/api/videos");
+        const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
+        const response = await fetch(`${baseUrl}/api/videos`);
         const data = await response.json();
         setVideos(data);
       } catch (error) {
