@@ -1,0 +1,9 @@
+platform :ios, '13.0'
+use_frameworks!
+
+target 'App' do
+  # This helper adds the Capacitor pods and plugins
+  # Appflow will run 'pod install' if it detects this file
+  pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../node_modules/@capacitor/ios'
+end
